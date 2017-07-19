@@ -2206,9 +2206,12 @@ class Server{
 			$killer->start();
 			$killer->kill();
 		}*/
-		$this->isRunning = false;
-		if($msg != ""){
-			$this->propertyCache["settings.shutdown-message"] = $msg;
+		$ev = new ServerShutdownEvent();
+		if(!$ev->isCancelled()){
+			$this->isRunning = false;
+			if($msg != ""){
+				$this->propertyCache["settings.shutdown-message"] = $msg;
+			}
 		}
 	}
 
