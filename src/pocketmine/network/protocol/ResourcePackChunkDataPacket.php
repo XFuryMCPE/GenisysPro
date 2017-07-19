@@ -32,9 +32,6 @@ class ResourcePackChunkDataPacket extends DataPacket {
 	public $progress;
 	public $data;
 
-	/**
-	 *
-	 */
 	public function decode(){
 		$this->packId = $this->getString();
 		$this->chunkIndex = $this->getLInt();
@@ -42,11 +39,7 @@ class ResourcePackChunkDataPacket extends DataPacket {
 		$this->data = $this->get($this->getLInt());
 	}
 
-	/**
-	 *
-	 */
 	public function encode(){
-		$this->reset();
 		$this->putString($this->packId);
 		$this->putLInt($this->chunkIndex);
 		$this->putLLong($this->progress);
