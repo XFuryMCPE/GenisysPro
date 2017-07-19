@@ -39,6 +39,7 @@ use pocketmine\event\level\LevelLoadEvent;
 use pocketmine\event\player\PlayerAddOpEvent;
 use pocketmine\event\server\QueryRegenerateEvent;
 use pocketmine\event\server\ServerCommandEvent;
+use pocketmine\event\server\ServerShutdownEvent;
 use pocketmine\event\Timings;
 use pocketmine\event\TimingsHandler;
 use pocketmine\event\TranslationContainer;
